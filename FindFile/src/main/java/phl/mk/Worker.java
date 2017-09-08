@@ -13,7 +13,7 @@ public class Worker {
 			for (Path path : stream) {
 				if (path.toFile().isDirectory()) {
 					getFileNames(fileNames, path, searchFile);
-				} else if (path.getFileName().toString().toLowerCase().contains(searchFile)) {
+				} else if (path.getFileName().toString().toLowerCase().contains(searchFile.toLowerCase())) {
 
 					fileNames.add(path.toAbsolutePath().toString());
 					System.out.println(path.toAbsolutePath().toString());
